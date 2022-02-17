@@ -1,8 +1,19 @@
 // calculate button click
 document.getElementById('calculate').addEventListener('click', function(){
+//function for validate inpute
+    const invalidMessageShow = document.getElementById('invalid-income');
 //input from income field
     const incomeField = document.getElementById('income');
     const income = incomeField.value;
+    if(income > 0){
+        invalidMessageShow.style.display = 'none';
+    }
+    else if(income < 0){
+        invalidMessageShow.style.display = 'block';
+    }
+    else if(typeof income == 'string'){
+        invalidMessageShow.style.display = 'block';
+    }
 // input from food field
     const foodCostField = document.getElementById('food-cost');
     const foodCost = foodCostField.value;
@@ -33,6 +44,8 @@ document.getElementById('calculate').addEventListener('click', function(){
         errorBalance.style.display = 'block';
         invalidBalance.style.display = 'none';
     }
+//validate inputs
+
  });
 
  //saving button click

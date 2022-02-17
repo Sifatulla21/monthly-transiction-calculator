@@ -10,7 +10,7 @@
     background-color:rgb(96, 194, 250);
 }
 .save-button{
-    width: 173px;
+    width: 132px;
     height: 44px;
     font-weight: bolder;
     font-size: larger;
@@ -20,4 +20,8 @@
 .invalid{
     color: red;
     display: none;
+}
+#saving-field{
+    width: 132px;
+    height: 44px;
 }
