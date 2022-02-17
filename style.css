@@ -26,7 +26,7 @@
     display: none;
 }
 /* saving field sizing */
-#saving-field{
+.saving-field{
     width: 132px;
     height: 44px;
 }

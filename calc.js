@@ -4,7 +4,7 @@
 //input from income field
     const field = document.getElementById(inputId);
     const value = field.value;
-    if(value > 0){
+    if(value >= 0){
         invalidMessageShow.style.display = 'none';
         return value;
     }
@@ -97,7 +97,7 @@ document.getElementById('saving-button').addEventListener('click', function(){
 //validate saving input
     const invalidSaving = document.getElementById('invalid-saving');
     const savingAmountInvalid = document.getElementById('saving-amount-invalid');
-    if(saving > 0){
+    if(saving >= 0){
         savingAmountInvalid.style.display = 'block';
         invalidSaving.style.display = 'none';
     }
