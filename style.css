@@ -1,6 +1,10 @@
 /* background color for calculator part */
 .b-color{
-    background-color: peachpuff;
+    background-color: #9cdde860;
+}
+.image-size{
+    height: 100%;
+    width: 100%;
 }
 /* calculate button  */
 .submit-button{
@@ -9,7 +13,7 @@
     font-weight: bolder;
     font-size: larger;
     color: black;
-    background-color:rgb(96, 194, 250);
+    background-color:#9cdce6;
 }
 /* save button */
 .save-button{
@@ -18,7 +22,7 @@
     font-weight: bolder;
     font-size: larger;
     color: black;
-    background-color:rgb(96, 194, 250);
+    background-color:#9cdce6;
 }
 /* class for error message */
 .invalid{
@@ -29,4 +33,11 @@
 .saving-field{
     width: 132px;
     height: 44px;
+}
+/* all input field design */
+.field{
+    width: 190px;
+    height: 44px;
+    background-color: #9cdce6d3;
+    color: black;
 }
