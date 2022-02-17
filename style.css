@@ -1,0 +1,23 @@
+.b-color{
+    background-color: peachpuff;
+}
+.submit-button{
+    width: 199px;
+    height: 51px;
+    font-weight: bolder;
+    font-size: larger;
+    color: black;
+    background-color:rgb(96, 194, 250);
+}
+.save-button{
+    width: 173px;
+    height: 44px;
+    font-weight: bolder;
+    font-size: larger;
+    color: black;
+    background-color:rgb(96, 194, 250);
+}
+#invalid-balance{
+    color: red;
+    display: none;
+}
