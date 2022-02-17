@@ -1,28 +1,30 @@
+//function for take input and validation    
+    function inputAndValidation(inputId, invalidId){
+    const invalidMessageShow = document.getElementById(invalidId);
+//input from income field
+    const field = document.getElementById(inputId);
+    const value = field.value;
+    if(value > 0){
+        invalidMessageShow.style.display = 'none';
+        return value;
+    }
+    else if(value < 0){
+        invalidMessageShow.style.display = 'block';
+    }
+    else if(typeof value == 'string'){
+        invalidMessageShow.style.display = 'block';
+    }
+}
 // calculate button click
 document.getElementById('calculate').addEventListener('click', function(){
-//function for validate inpute
-    const invalidMessageShow = document.getElementById('invalid-income');
 //input from income field
-    const incomeField = document.getElementById('income');
-    const income = incomeField.value;
-    if(income > 0){
-        invalidMessageShow.style.display = 'none';
-    }
-    else if(income < 0){
-        invalidMessageShow.style.display = 'block';
-    }
-    else if(typeof income == 'string'){
-        invalidMessageShow.style.display = 'block';
-    }
+    const income = inputAndValidation('income', 'invalid-income');
 // input from food field
-    const foodCostField = document.getElementById('food-cost');
-    const foodCost = foodCostField.value;
+    const foodCost = inputAndValidation('food-cost', 'invalid-food');
 //input from rent field
-    const rentCostField = document.getElementById('rent-cost');
-    const rentCost = rentCostField.value;
+    const rentCost = inputAndValidation('rent-cost', 'invalid-rental');
 //input from clothes field
-    const clothesCostField = document.getElementById('clothes-cost');
-    const clothesCost = clothesCostField.value;
+    const clothesCost = inputAndValidation('clothes-cost', 'invalid-clothes');
 //calculate total expense
     const totalExpence = parseFloat(foodCost) + parseFloat(rentCost) + parseFloat(clothesCost);
 //show total expense    
@@ -51,8 +53,9 @@ document.getElementById('calculate').addEventListener('click', function(){
  //saving button click
 document.getElementById('saving-button').addEventListener('click', function(){
 //get value from income field    
-    const incomeField = document.getElementById('income');
-    const incomeSaving = incomeField.value;
+    // const incomeField = document.getElementById('income');
+    // const incomeSaving = incomeField.value;
+    const incomeSaving = inputAndValidation('income', 'invalid-income')
 //get value from balance    
     const balanceText = document.getElementById('balance');
     const balanceTextSaving = balanceText.innerText;
