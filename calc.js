@@ -53,8 +53,6 @@ document.getElementById('calculate').addEventListener('click', function(){
  //saving button click
 document.getElementById('saving-button').addEventListener('click', function(){
 //get value from income field    
-    // const incomeField = document.getElementById('income');
-    // const incomeSaving = incomeField.value;
     const incomeSaving = inputAndValidation('income', 'invalid-income')
 //get value from balance    
     const balanceText = document.getElementById('balance');
@@ -65,8 +63,21 @@ document.getElementById('saving-button').addEventListener('click', function(){
 //calculate saving amount
     const totalSavingAmount = (parseFloat(incomeSaving) / 100) * parseFloat(saving);
 //show saving amount
+//validation for total saving amount
+    const invalidMessageLessAmount = document.getElementById('invalid-message-less-amount');
+    const invalidMessageAdditionalAmount = document.getElementById('invalid-message-additional-amount');
+    if(saving > 100){
+        const savingAmountShow = document.getElementById('saving-amount');
+        savingAmountShow.innerText = totalSavingAmount;
+        invalidMessageLessAmount.style.display = 'block';
+        invalidMessageAdditionalAmount.style.display = 'block';
+    }
+    else{
     const savingAmountShow = document.getElementById('saving-amount');
     savingAmountShow.innerText = totalSavingAmount;
+    invalidMessageLessAmount.style.display = 'none';
+    invalidMessageAdditionalAmount.style.display = 'none';
+    }
 //calculate remaining balance
     const remainingBalance = parseFloat(balanceTextSaving) - parseFloat(totalSavingAmount);
 //Show remaining balance
