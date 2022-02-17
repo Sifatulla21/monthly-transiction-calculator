@@ -1,6 +1,8 @@
+/* background color for calculator part */
 .b-color{
     background-color: peachpuff;
 }
+/* calculate button  */
 .submit-button{
     width: 199px;
     height: 51px;
@@ -9,6 +11,7 @@
     color: black;
     background-color:rgb(96, 194, 250);
 }
+/* save button */
 .save-button{
     width: 132px;
     height: 44px;
@@ -17,10 +20,12 @@
     color: black;
     background-color:rgb(96, 194, 250);
 }
+/* class for error message */
 .invalid{
     color: red;
     display: none;
 }
+/* saving field sizing */
 #saving-field{
     width: 132px;
     height: 44px;
