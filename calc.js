@@ -86,7 +86,7 @@ document.getElementById('saving-button').addEventListener('click', function(){
 //validate saving and remaining balance
     const invalidtotalSavingAmount = document.getElementById('invalid-remaining-balance');
     const invalidbalanceTextSaving = document.getElementById('remaining-amount-invalid');
-    if(remainingBalance < 0){
+    if(remainingBalance < 0 || balanceTextSaving < totalSavingAmount){
         invalidtotalSavingAmount.style.display = 'block';
         invalidbalanceTextSaving.style.display = 'none';
     }
